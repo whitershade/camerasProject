@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>turf-union</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src="js/turf.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='map'></div>
+
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoianZyb3Vzc2VhdSIsImEiOiJYYUNlcVRZIn0.lp0867Jn5ynlj72kMwICSA';
+
+    var polygon1 = turf.polygon([
+    [
+        [174, 280], [200.25889989971745, 42.6307930014886],
+        [162.8400355012059, 42.236910218346374], [124.73344794576786, 41.8357882440786],
+        [83.90308726233813, 41.4059949737267], [42.48650647915831, 49.31386484268674],
+        [174, 280]
+    ]
+], {
+      "fill": "#6BC65F",
+      "stroke": "#6BC65F",
+      "stroke-width": 5
+    });
+
+    var polygon2 = turf.polygon([
+          [
+            [174, 280], [200.25889989971745, 42.6307930014886],
+        [162.8400355012059, 42.236910218346374], [124.73344794576786, 41.8357882440786],
+        [83.90308726233813, 41.4059949737267], [42.48650647915831, 49.31386484268674],
+        [174, 280]
+          ]
+        ], {
+      "fill": "#6BC65F",
+      "stroke": "#6BC65F",
+      "stroke-width": 5
+    });
+
+    var polygon = turf.union(polygon1, polygon2);
+
+    var map = L.mapbox.map('map', 'jvrousseau.h4h90e5o')
+      .setView([35.463453, -100.514914], 5)
+      .featureLayer.setGeoJSON(polygon1);
+  </script>
+</body>
+
+</html>

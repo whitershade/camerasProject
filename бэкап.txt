@@ -1,0 +1,29 @@
+//      for (var i = 6; i > 1; i -= 1) {
+//        finishPoint = new PointConstructor((randomX + Math.sin(deg - (Math.PI / 100) * a * i) * r), randomY + Math.cos(deg - (Math.PI / 100) * a * i) * r);
+//        var treangleLines = new LineConstructor(startPoint, finishPoint, 2, cameraLineColor);
+//        checkCameraLinesIntersection(treangleLines);
+//        drawLine(treangleLines);
+//        drawCircle(randomX, randomY, 3, "red");
+//      }
+
+
+//    console.log(turfPolygon1);
+    //    console.log(turfPolygon2);
+    //    console.log(unionPolygon);
+//    drawPolygon(getArrayPointOfUnionPolygon(unionPolygon), "red");
+//    console.log("Камера 1 площадь видимости: " + camera1.areaOfVisibility);
+//    console.log("Камера 2 площадь видимости: " + camera2.areaOfVisibility);
+//    console.log("Общая площадь видимости: " +
+//      calcPolygonArea(getArrayPointOfUnionPolygon(unionPolygon)));
+
+
+fitness = 0;
+      parents.forEach(function (item) {
+        fitness += item.fitness;
+      });
+//      console.log("*******************************************************");
+      //      console.log("средний поколения: " + fitness / cameraPopulation.length);
+      //      cameraPopulation.forEach(function (item) {
+      //        console.log(item);
+      //      });
+

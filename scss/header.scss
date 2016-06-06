@@ -1,0 +1,30 @@
+@import "bourbon";
+@import "fonts";
+@import "vars";
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: green;
+}

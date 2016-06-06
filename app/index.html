@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Заголовок</title>
+  <meta name="description" content="">
+  <!-- Bootstrap v3.3.4 Grid Styles -->
+
+  <!-- Header CSS (First Sections of Website: paste after release from _header.min.css here) -->
+  <style></style>
+  <!-- Load Main CSS Compilled without JS -->
+  <noscript></noscript>
+
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--  <meta property="og:image" content="path/to/image.jpg">-->
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+</head>
+
+<body>
+
+  <!-- Здесь пишем код -->
+  <header class="main-header">
+    <div class="container">
+      <div class="draw-tools-menu">
+        <label for="lineWidthInput">
+          Ширина линии:
+        </label>
+        <input type="number" value="10" id="lineWidthInput" step="5">
+        <select name="lineColorSelect" id="lineColorSelect">
+          <option value="red">Wall</option>
+          <option value="blue">Window</option>
+          <option value="green">Door</option>
+        </select>
+        <button id="determineTheScale">Scale</button>
+        <button id="determineArea">Area</button>
+        <button id="checkSize">Check size</button>
+        <button id="test">Test</button>
+        <button id="unionTest">Union Test</button>
+        <button id="gaTest">GA Test</button>
+      </div>
+      <div class="button-tools-menu">
+        <button id="undoButton">Undo</button>
+        <button id="clearAllButton">Clear</button>
+        <button id="saveButton">Save</button>
+        <button id="deleteLastCamera">Delete</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="building-area">
+        <canvas height='400' width='400' id='myCanvas'>Обновите браузер</canvas>
+        <div class="information-area">
+          <p id="areaOfBuilidng">Размеры помещения: </p>
+          <p id="areaOfProtection">Площадь исследуемой зоны: </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="cameras" id="cameras">
+      </div>
+    </div>
+  </footer>
+
+  <!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+  <!-- build:js js/main.js -->
+  <script src="js/turf.min.js"></script>
+  <script src="js/common.js"></script>
+  <!-- endbuild -->
+
+
+</body>
+
+</html>
